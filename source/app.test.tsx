@@ -2,7 +2,7 @@ import React from "react";
 import chalk from "chalk";
 import { render } from "ink-testing-library";
 import { expect, test } from "vitest";
-import App from "./source/app.js";
+import App from "./app.js";
 
 test("greet unknown user", () => {
 	const { lastFrame } = render(<App name={undefined} />);
