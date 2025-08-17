@@ -19,4 +19,11 @@ const cli = meow(
 	{ importMeta: import.meta, flags: { name: { type: "string" } } },
 );
 
+const enterAltScreenCommand = "\x1b[?1049h";
+const leaveAltScreenCommand = "\x1b[?1049l";
+process.stdout.write(enterAltScreenCommand);
+process.on("exit", () => {
+	process.stdout.write(leaveAltScreenCommand);
+});
+
 render(<App name={cli.flags.name} />);
