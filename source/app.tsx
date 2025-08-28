@@ -28,14 +28,8 @@ export default function App() {
 				<Text color="white">line 2</Text>
 				<Text color="white">line 3</Text>
 			</Box>
-			<Box
-				flexGrow={0}
-				flexShrink={0}
-				flexBasis="auto"
-				backgroundColor="#0d1117"
-				minHeight={1}
-			>
-				<Text color="#f0f6fc">{command}</Text>
+			<Box flexGrow={0} flexShrink={0} flexBasis="auto" minHeight={1}>
+				<Text color="white">{command}</Text>
 			</Box>
 		</Box>
 	);
