@@ -18,7 +18,7 @@ function useStdoutDimensions(): [number, number] {
 			stdout.off("resize", onResize);
 		};
 	}, [stdout]);
-	return [size.columns, size.rows];
+	return [size.columns, size.rows - 1]; // -1 for https://github.com/vadimdemedes/ink/issues/752
 }
 
 function FullScreen({ children }: React.PropsWithChildren): React.ReactNode {
