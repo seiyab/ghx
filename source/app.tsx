@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, useInput, useApp, Box } from "ink";
+import { Header } from "./header.js";
 
 export default function App() {
 	const { exit } = useApp();
@@ -21,8 +22,8 @@ export default function App() {
 		}
 	});
 	return (
-		// <Box height="100%" flexDirection="column" flexGrow={1}>
-		<Box flexDirection="column">
+		<Box flexDirection="column" alignItems="stretch" width="100%" height="100%">
+			<Header />
 			<Box flexDirection="column" flexGrow={1}>
 				<Text color="white">line 1</Text>
 				<Text color="white">line 2</Text>
